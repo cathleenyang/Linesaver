@@ -1,0 +1,6 @@
+module Pods_LineSaver {
+  umbrella header "Pods-LineSaver-umbrella.h"
+
+  export *
+  module * { export * }
+}

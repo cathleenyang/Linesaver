@@ -1,0 +1,6 @@
+module Pods_LineSaver_LineSaverUITests {
+  umbrella header "Pods-LineSaver-LineSaverUITests-umbrella.h"
+
+  export *
+  module * { export * }
+}

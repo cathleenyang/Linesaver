@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Workspace
+   version = "1.0">
+   <FileRef
+      location = "group:../LineSaver/View/BottomBorderTextField.swift">
+   </FileRef>
+   <FileRef
+      location = "group:../RoundedButton.swift">
+   </FileRef>
+   <FileRef
+      location = "group:Pacifico.ttf">
+   </FileRef>
+   <FileRef
+      location = "self:LineSaver.xcodeproj">
+   </FileRef>
+</Workspace>
