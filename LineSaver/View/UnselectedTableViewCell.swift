@@ -18,6 +18,20 @@ class UnselectedTableViewCell: UITableViewCell {
     @IBOutlet weak var waitTimeLabel: UILabel!
     @IBOutlet weak var initialLabel: UILabel!
     
+    var store:Store?
+    
+    
+    func update(store: Store) {
+        self.store = store
+        nameLabel?.text = store.name
+        if let wait = store.currentWaitTime {
+            waitTimeLabel.text = "Current Wait: \(wait) min"
+        } else {waitTimeLabel.text = "No data" }
+        distanceLabel?.text = String(format: "%.2f mi", store.distanceFromCurrentUser)
+        initialLabel?.text = String(store.name.prefix(1))
+        imageView?.backgroundColor = .random()
+    }
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

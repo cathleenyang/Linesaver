@@ -7,7 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		2C8134FA5471AE3A8D7D39FE /* libPods-LineSaver.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A3297E63DB382C072D92C8F9 /* libPods-LineSaver.a */; };
+		1EAE51CDBA325367FCED2257 /* libPods-LineSaver.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2D75CA545BFC90359A0B542F /* libPods-LineSaver.a */; };
+		4E31E079245A3A5D00368780 /* BuildFile in Frameworks */ = {isa = PBXBuildFile; productRef = 4E31E078245A3A5D00368780 /* SwiftPackageProductDependency */; };
+		4E31E07D245A682E00368780 /* JoinLineViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E31E07C245A682E00368780 /* JoinLineViewController.swift */; };
+		4E398E652459464200CDD1E4 /* SignInSignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E398E642459464200CDD1E4 /* SignInSignUpViewController.swift */; };
+		4E3AF8B024580076005964AC /* CreateReservationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E3AF8AF24580076005964AC /* CreateReservationViewController.swift */; };
+		4E3AF8B2245804D5005964AC /* BrowseStoreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E3AF8B1245804D5005964AC /* BrowseStoreViewController.swift */; };
+		4E3AF8B4245807D4005964AC /* QRScannerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E3AF8B3245807D4005964AC /* QRScannerViewController.swift */; };
+		4E3AF8BA245906CB005964AC /* HomeMasterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E3AF8B9245906CB005964AC /* HomeMasterViewController.swift */; };
+		4E43A4562463846500A8E3EA /* CheckInLineTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E43A4552463846500A8E3EA /* CheckInLineTableViewController.swift */; };
+		4E43A458246384F600A8E3EA /* PlaceInLineTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E43A457246384F600A8E3EA /* PlaceInLineTableViewCell.swift */; };
 		4E6C19112451711A00329E6C /* UnselectedTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E6C19102451711A00329E6C /* UnselectedTableViewCell.swift */; };
 		4E6C19132451715E00329E6C /* SelectedPartnerStoreTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E6C19122451715E00329E6C /* SelectedPartnerStoreTableViewCell.swift */; };
 		4E6C19152451718500329E6C /* SelectedNonPartnerTableViewCell copy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E6C19142451718500329E6C /* SelectedNonPartnerTableViewCell copy.swift */; };
@@ -20,26 +29,34 @@
 		4ECF3308244139DD00C9DE31 /* LineSaverTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ECF3307244139DD00C9DE31 /* LineSaverTests.swift */; };
 		4ECF3313244139DD00C9DE31 /* LineSaverUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ECF3312244139DD00C9DE31 /* LineSaverUITests.swift */; };
 		4ECF3325244569A900C9DE31 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ECF3324244569A900C9DE31 /* User.swift */; };
-		4ECF3327244569CD00C9DE31 /* CreateAccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ECF3326244569CD00C9DE31 /* CreateAccountViewController.swift */; };
 		4ECF332A2445919800C9DE31 /* Pacifico.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4ECF33292445919800C9DE31 /* Pacifico.ttf */; };
 		4ECF332C244592F700C9DE31 /* Quicksand-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 4ECF332B244592F700C9DE31 /* Quicksand-Bold.otf */; };
 		4ECF332E244593AF00C9DE31 /* RoundedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ECF332D244593AF00C9DE31 /* RoundedButton.swift */; };
-		4ECF33302445A20D00C9DE31 /* BottomBorderTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ECF332F2445A20C00C9DE31 /* BottomBorderTextField.swift */; };
 		4ECF33342446E6BE00C9DE31 /* VerificationCodeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ECF33332446E6BE00C9DE31 /* VerificationCodeViewController.swift */; };
 		4ECF33362446F94A00C9DE31 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4ECF33352446F94A00C9DE31 /* GoogleService-Info.plist */; };
-		4EE054E32448159000294EF0 /* StartScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EE054E22448159000294EF0 /* StartScreenViewController.swift */; };
+		4ED37C322459602400E9B39E /* fa-regular-400.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4ED37C312459602400E9B39E /* fa-regular-400.ttf */; };
 		4EE054E52448226600294EF0 /* Reservation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EE054E42448226600294EF0 /* Reservation.swift */; };
 		4EE054E7244823A400294EF0 /* Queue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EE054E6244823A400294EF0 /* Queue.swift */; };
 		4EE054E92448245900294EF0 /* Store.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EE054E82448245900294EF0 /* Store.swift */; };
-		4EFF9FD62450EF0B00D18A18 /* BrowseStoreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EFF9FD52450EF0B00D18A18 /* BrowseStoreViewController.swift */; };
+		4EF59D32246107E900239ED5 /* StartScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EF59D31246107E900239ED5 /* StartScreenViewController.swift */; };
+		4EF59D342462453900239ED5 /* QRDisplayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EF59D332462453900239ED5 /* QRDisplayViewController.swift */; };
+		4EF59D362462572200239ED5 /* HomeNavigationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EF59D352462572200239ED5 /* HomeNavigationViewController.swift */; };
+		4EF59D382462646D00239ED5 /* ReservationMasterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EF59D372462646D00239ED5 /* ReservationMasterViewController.swift */; };
+		4EF59D3C246337E500239ED5 /* ProfileTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EF59D3B246337E500239ED5 /* ProfileTableViewController.swift */; };
+		4EF59D3E2463448E00239ED5 /* DateService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EF59D3D2463448E00239ED5 /* DateService.swift */; };
+		4EF59D4224634DE500239ED5 /* ReservationsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EF59D4124634DE400239ED5 /* ReservationsModel.swift */; };
+		4EF59D442463510900239ED5 /* ActiveReservationTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EF59D432463510900239ED5 /* ActiveReservationTableViewCell.swift */; };
+		4EF59D462463512D00239ED5 /* LineReservationTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EF59D452463512C00239ED5 /* LineReservationTableViewCell.swift */; };
+		4EF59D482463514900239ED5 /* ScheduleReservationTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EF59D472463514900239ED5 /* ScheduleReservationTableViewCell.swift */; };
+		4EF59D4A24637A9800239ED5 /* ReportWaitTimeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EF59D4924637A9800239ED5 /* ReportWaitTimeViewController.swift */; };
 		4EFF9FD82450EFE300D18A18 /* StoreListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EFF9FD72450EFE300D18A18 /* StoreListTableViewController.swift */; };
 		4EFF9FDA2450F08A00D18A18 /* StoresModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EFF9FD92450F08A00D18A18 /* StoresModel.swift */; };
-		4EFF9FDD24511D3900D18A18 /* SwiftyJSON in Frameworks */ = {isa = PBXBuildFile; productRef = 4EFF9FDC24511D3900D18A18 /* SwiftyJSON */; };
+		4EFF9FDD24511D3900D18A18 /* BuildFile in Frameworks */ = {isa = PBXBuildFile; productRef = 4EFF9FDC24511D3900D18A18 /* SwiftPackageProductDependency */; };
 		4EFF9FDF24512AD600D18A18 /* LocationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EFF9FDE24512AD600D18A18 /* LocationService.swift */; };
 		4EFF9FE324513E3D00D18A18 /* FBDatabaseService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EFF9FE224513E3D00D18A18 /* FBDatabaseService.swift */; };
 		4EFF9FE524513E9400D18A18 /* FBAuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EFF9FE424513E9400D18A18 /* FBAuthService.swift */; };
-		C4676FBC75E2F55E65833A1D /* libPods-LineSaverTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3BCF9314CB2F472F0DA87EDC /* libPods-LineSaverTests.a */; };
-		CE674AC0EB0D4BB21CFDF5BF /* libPods-LineSaver-LineSaverUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2FCF1DAC002B7E7F79921147 /* libPods-LineSaver-LineSaverUITests.a */; };
+		8976CE69DF06638CFCA37A31 /* libPods-LineSaver-LineSaverUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C5D2F03D6405573C36AA0E94 /* libPods-LineSaver-LineSaverUITests.a */; };
+		F5157E912B06A3E5BA6A2184 /* libPods-LineSaverTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7DC822B2A94386880FE59ED8 /* libPods-LineSaverTests.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,9 +78,17 @@
 
 /* Begin PBXFileReference section */
 		1269D5556E4A386702C889BC /* Pods-LineSaver.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LineSaver.release.xcconfig"; path = "Target Support Files/Pods-LineSaver/Pods-LineSaver.release.xcconfig"; sourceTree = "<group>"; };
-		2FCF1DAC002B7E7F79921147 /* libPods-LineSaver-LineSaverUITests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-LineSaver-LineSaverUITests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		2D75CA545BFC90359A0B542F /* libPods-LineSaver.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-LineSaver.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		33AA6A25B07E76B79A2CA716 /* Pods-LineSaver.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LineSaver.debug.xcconfig"; path = "Target Support Files/Pods-LineSaver/Pods-LineSaver.debug.xcconfig"; sourceTree = "<group>"; };
-		3BCF9314CB2F472F0DA87EDC /* libPods-LineSaverTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-LineSaverTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		4E31E07C245A682E00368780 /* JoinLineViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JoinLineViewController.swift; sourceTree = "<group>"; };
+		4E398E642459464200CDD1E4 /* SignInSignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInSignUpViewController.swift; sourceTree = "<group>"; };
+		4E3AF8AB24580020005964AC /* LineSaver-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "LineSaver-Bridging-Header.h"; sourceTree = "<group>"; };
+		4E3AF8AF24580076005964AC /* CreateReservationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CreateReservationViewController.swift; path = "/Users/Cat/Desktop/ITP 342/LineSaver/LineSaver/Controller/CreateReservationViewController.swift"; sourceTree = "<absolute>"; };
+		4E3AF8B1245804D5005964AC /* BrowseStoreViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrowseStoreViewController.swift; sourceTree = "<group>"; };
+		4E3AF8B3245807D4005964AC /* QRScannerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRScannerViewController.swift; sourceTree = "<group>"; };
+		4E3AF8B9245906CB005964AC /* HomeMasterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeMasterViewController.swift; sourceTree = "<group>"; };
+		4E43A4552463846500A8E3EA /* CheckInLineTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckInLineTableViewController.swift; sourceTree = "<group>"; };
+		4E43A457246384F600A8E3EA /* PlaceInLineTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceInLineTableViewCell.swift; sourceTree = "<group>"; };
 		4E6C19102451711A00329E6C /* UnselectedTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnselectedTableViewCell.swift; sourceTree = "<group>"; };
 		4E6C19122451715E00329E6C /* SelectedPartnerStoreTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SelectedPartnerStoreTableViewCell.swift; sourceTree = "<group>"; };
 		4E6C19142451718500329E6C /* SelectedNonPartnerTableViewCell copy.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "SelectedNonPartnerTableViewCell copy.swift"; sourceTree = "<group>"; };
@@ -82,27 +107,36 @@
 		4ECF3312244139DD00C9DE31 /* LineSaverUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LineSaverUITests.swift; sourceTree = "<group>"; };
 		4ECF3314244139DD00C9DE31 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4ECF3324244569A900C9DE31 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
-		4ECF3326244569CD00C9DE31 /* CreateAccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateAccountViewController.swift; sourceTree = "<group>"; };
 		4ECF33292445919800C9DE31 /* Pacifico.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Pacifico.ttf; sourceTree = "<group>"; };
 		4ECF332B244592F700C9DE31 /* Quicksand-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Quicksand-Bold.otf"; sourceTree = "<group>"; };
 		4ECF332D244593AF00C9DE31 /* RoundedButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoundedButton.swift; sourceTree = "<group>"; };
-		4ECF332F2445A20C00C9DE31 /* BottomBorderTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BottomBorderTextField.swift; sourceTree = "<group>"; };
 		4ECF33332446E6BE00C9DE31 /* VerificationCodeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = VerificationCodeViewController.swift; path = LineSaver/Controller/VerificationCodeViewController.swift; sourceTree = SOURCE_ROOT; };
 		4ECF33352446F94A00C9DE31 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
-		4EE054E22448159000294EF0 /* StartScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartScreenViewController.swift; sourceTree = "<group>"; };
+		4ED37C312459602400E9B39E /* fa-regular-400.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "fa-regular-400.ttf"; sourceTree = "<group>"; };
 		4EE054E42448226600294EF0 /* Reservation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reservation.swift; sourceTree = "<group>"; };
 		4EE054E6244823A400294EF0 /* Queue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Queue.swift; sourceTree = "<group>"; };
 		4EE054E82448245900294EF0 /* Store.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Store.swift; sourceTree = "<group>"; };
-		4EFF9FD52450EF0B00D18A18 /* BrowseStoreViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = BrowseStoreViewController.swift; path = LineSaver/Controller/BrowseStoreViewController.swift; sourceTree = SOURCE_ROOT; };
+		4EF59D31246107E900239ED5 /* StartScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = StartScreenViewController.swift; path = LineSaver/Controller/StartScreenViewController.swift; sourceTree = SOURCE_ROOT; };
+		4EF59D332462453900239ED5 /* QRDisplayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRDisplayViewController.swift; sourceTree = "<group>"; };
+		4EF59D352462572200239ED5 /* HomeNavigationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeNavigationViewController.swift; sourceTree = "<group>"; };
+		4EF59D372462646D00239ED5 /* ReservationMasterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReservationMasterViewController.swift; sourceTree = "<group>"; };
+		4EF59D3B246337E500239ED5 /* ProfileTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ProfileTableViewController.swift; path = "/Users/Cat/Desktop/ITP 342/LineSaver/LineSaver/Controller/ProfileTableViewController.swift"; sourceTree = "<absolute>"; };
+		4EF59D3D2463448E00239ED5 /* DateService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateService.swift; sourceTree = "<group>"; };
+		4EF59D4124634DE400239ED5 /* ReservationsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ReservationsModel.swift; path = "/Users/Cat/Desktop/ITP 342/LineSaver/LineSaver/Model/ReservationsModel.swift"; sourceTree = "<absolute>"; };
+		4EF59D432463510900239ED5 /* ActiveReservationTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ActiveReservationTableViewCell.swift; path = LineSaver/View/ActiveReservationTableViewCell.swift; sourceTree = SOURCE_ROOT; };
+		4EF59D452463512C00239ED5 /* LineReservationTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = LineReservationTableViewCell.swift; path = "/Users/Cat/Desktop/ITP 342/LineSaver/LineSaver/View/LineReservationTableViewCell.swift"; sourceTree = "<absolute>"; };
+		4EF59D472463514900239ED5 /* ScheduleReservationTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleReservationTableViewCell.swift; sourceTree = "<group>"; };
+		4EF59D4924637A9800239ED5 /* ReportWaitTimeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReportWaitTimeViewController.swift; sourceTree = "<group>"; };
 		4EFF9FD72450EFE300D18A18 /* StoreListTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreListTableViewController.swift; sourceTree = "<group>"; };
 		4EFF9FD92450F08A00D18A18 /* StoresModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoresModel.swift; sourceTree = "<group>"; };
 		4EFF9FDE24512AD600D18A18 /* LocationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationService.swift; sourceTree = "<group>"; };
 		4EFF9FE224513E3D00D18A18 /* FBDatabaseService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FBDatabaseService.swift; sourceTree = "<group>"; };
 		4EFF9FE424513E9400D18A18 /* FBAuthService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FBAuthService.swift; sourceTree = "<group>"; };
 		581FABAF4F50C39BEE061D39 /* Pods-LineSaverTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LineSaverTests.debug.xcconfig"; path = "Target Support Files/Pods-LineSaverTests/Pods-LineSaverTests.debug.xcconfig"; sourceTree = "<group>"; };
+		7DC822B2A94386880FE59ED8 /* libPods-LineSaverTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-LineSaverTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9217480D7D705687120D83E2 /* Pods-LineSaverTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LineSaverTests.release.xcconfig"; path = "Target Support Files/Pods-LineSaverTests/Pods-LineSaverTests.release.xcconfig"; sourceTree = "<group>"; };
-		A3297E63DB382C072D92C8F9 /* libPods-LineSaver.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-LineSaver.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A6D16DBEF0A28DE586AABDBD /* Pods-LineSaver-LineSaverUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LineSaver-LineSaverUITests.debug.xcconfig"; path = "Target Support Files/Pods-LineSaver-LineSaverUITests/Pods-LineSaver-LineSaverUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		C5D2F03D6405573C36AA0E94 /* libPods-LineSaver-LineSaverUITests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-LineSaver-LineSaverUITests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F47D433A891D1279604711C9 /* Pods-LineSaver-LineSaverUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LineSaver-LineSaverUITests.release.xcconfig"; path = "Target Support Files/Pods-LineSaver-LineSaverUITests/Pods-LineSaver-LineSaverUITests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -111,8 +145,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4EFF9FDD24511D3900D18A18 /* SwiftyJSON in Frameworks */,
-				2C8134FA5471AE3A8D7D39FE /* libPods-LineSaver.a in Frameworks */,
+				4EFF9FDD24511D3900D18A18 /* BuildFile in Frameworks */,
+				4E31E079245A3A5D00368780 /* BuildFile in Frameworks */,
+				1EAE51CDBA325367FCED2257 /* libPods-LineSaver.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -120,7 +155,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C4676FBC75E2F55E65833A1D /* libPods-LineSaverTests.a in Frameworks */,
+				F5157E912B06A3E5BA6A2184 /* libPods-LineSaverTests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -128,7 +163,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CE674AC0EB0D4BB21CFDF5BF /* libPods-LineSaver-LineSaverUITests.a in Frameworks */,
+				8976CE69DF06638CFCA37A31 /* libPods-LineSaver-LineSaverUITests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -138,9 +173,9 @@
 		448D67EA68224FC53648BB8C /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				A3297E63DB382C072D92C8F9 /* libPods-LineSaver.a */,
-				2FCF1DAC002B7E7F79921147 /* libPods-LineSaver-LineSaverUITests.a */,
-				3BCF9314CB2F472F0DA87EDC /* libPods-LineSaverTests.a */,
+				2D75CA545BFC90359A0B542F /* libPods-LineSaver.a */,
+				C5D2F03D6405573C36AA0E94 /* libPods-LineSaver-LineSaverUITests.a */,
+				7DC822B2A94386880FE59ED8 /* libPods-LineSaverTests.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -170,7 +205,6 @@
 		4ECF32EF244139D800C9DE31 /* LineSaver */ = {
 			isa = PBXGroup;
 			children = (
-				4EFF9FE62451556800D18A18 /* Code Graveyard */,
 				4ECF32FE244139DC00C9DE31 /* Info.plist */,
 				4ECF33352446F94A00C9DE31 /* GoogleService-Info.plist */,
 				4ECF32F9244139DC00C9DE31 /* Assets.xcassets */,
@@ -204,16 +238,17 @@
 		4ECF33202445693200C9DE31 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				4ECF332F2445A20C00C9DE31 /* BottomBorderTextField.swift */,
 				4ECF332D244593AF00C9DE31 /* RoundedButton.swift */,
 				4ECF3324244569A900C9DE31 /* User.swift */,
 				4EE054E42448226600294EF0 /* Reservation.swift */,
+				4EF59D4124634DE400239ED5 /* ReservationsModel.swift */,
 				4EE054E6244823A400294EF0 /* Queue.swift */,
 				4EE054E82448245900294EF0 /* Store.swift */,
 				4EFF9FD92450F08A00D18A18 /* StoresModel.swift */,
 				4EFF9FDE24512AD600D18A18 /* LocationService.swift */,
 				4EFF9FE424513E9400D18A18 /* FBAuthService.swift */,
 				4EFF9FE224513E3D00D18A18 /* FBDatabaseService.swift */,
+				4EF59D3D2463448E00239ED5 /* DateService.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -221,11 +256,16 @@
 		4ECF33212445693700C9DE31 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				4E43A457246384F600A8E3EA /* PlaceInLineTableViewCell.swift */,
+				4EF59D472463514900239ED5 /* ScheduleReservationTableViewCell.swift */,
+				4EF59D452463512C00239ED5 /* LineReservationTableViewCell.swift */,
+				4EF59D432463510900239ED5 /* ActiveReservationTableViewCell.swift */,
 				4E6C19142451718500329E6C /* SelectedNonPartnerTableViewCell copy.swift */,
 				4E6C19122451715E00329E6C /* SelectedPartnerStoreTableViewCell.swift */,
 				4E6C19102451711A00329E6C /* UnselectedTableViewCell.swift */,
 				4ECF32FB244139DC00C9DE31 /* LaunchScreen.storyboard */,
 				4ECF32F6244139D800C9DE31 /* Main.storyboard */,
+				4E3AF8AB24580020005964AC /* LineSaver-Bridging-Header.h */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -233,11 +273,22 @@
 		4ECF33222445693A00C9DE31 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				4EFF9FD52450EF0B00D18A18 /* BrowseStoreViewController.swift */,
+				4E43A4552463846500A8E3EA /* CheckInLineTableViewController.swift */,
+				4EF59D3B246337E500239ED5 /* ProfileTableViewController.swift */,
+				4E3AF8B1245804D5005964AC /* BrowseStoreViewController.swift */,
+				4E3AF8B9245906CB005964AC /* HomeMasterViewController.swift */,
+				4EF59D372462646D00239ED5 /* ReservationMasterViewController.swift */,
+				4EF59D352462572200239ED5 /* HomeNavigationViewController.swift */,
+				4E3AF8AF24580076005964AC /* CreateReservationViewController.swift */,
 				4EFF9FD72450EFE300D18A18 /* StoreListTableViewController.swift */,
 				4ECF32F4244139D800C9DE31 /* ViewController.swift */,
 				4ECF33332446E6BE00C9DE31 /* VerificationCodeViewController.swift */,
-				4EE054E22448159000294EF0 /* StartScreenViewController.swift */,
+				4EF59D31246107E900239ED5 /* StartScreenViewController.swift */,
+				4E398E642459464200CDD1E4 /* SignInSignUpViewController.swift */,
+				4E3AF8B3245807D4005964AC /* QRScannerViewController.swift */,
+				4E31E07C245A682E00368780 /* JoinLineViewController.swift */,
+				4EF59D4924637A9800239ED5 /* ReportWaitTimeViewController.swift */,
+				4EF59D332462453900239ED5 /* QRDisplayViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -256,16 +307,9 @@
 			children = (
 				4ECF33292445919800C9DE31 /* Pacifico.ttf */,
 				4ECF332B244592F700C9DE31 /* Quicksand-Bold.otf */,
+				4ED37C312459602400E9B39E /* fa-regular-400.ttf */,
 			);
 			path = Fonts;
-			sourceTree = "<group>";
-		};
-		4EFF9FE62451556800D18A18 /* Code Graveyard */ = {
-			isa = PBXGroup;
-			children = (
-				4ECF3326244569CD00C9DE31 /* CreateAccountViewController.swift */,
-			);
-			path = "Code Graveyard";
 			sourceTree = "<group>";
 		};
 		CB6805D22DF1A5E5E7F9354D /* Pods */ = {
@@ -300,7 +344,8 @@
 			);
 			name = LineSaver;
 			packageProductDependencies = (
-				4EFF9FDC24511D3900D18A18 /* SwiftyJSON */,
+				4EFF9FDC24511D3900D18A18 /* SwiftPackageProductDependency */,
+				4E31E078245A3A5D00368780 /* SwiftPackageProductDependency */,
 			);
 			productName = LineSaver;
 			productReference = 4ECF32ED244139D800C9DE31 /* LineSaver.app */;
@@ -357,6 +402,7 @@
 				TargetAttributes = {
 					4ECF32EC244139D800C9DE31 = {
 						CreatedOnToolsVersion = 11.3.1;
+						LastSwiftMigration = 1130;
 					};
 					4ECF3302244139DD00C9DE31 = {
 						CreatedOnToolsVersion = 11.3.1;
@@ -378,7 +424,8 @@
 			);
 			mainGroup = 4ECF32E4244139D800C9DE31;
 			packageReferences = (
-				4EFF9FDB24511D3900D18A18 /* XCRemoteSwiftPackageReference "SwiftyJSON" */,
+				4EFF9FDB24511D3900D18A18 /* RemoteSwiftPackageReference */,
+				4E31E077245A3A5D00368780 /* RemoteSwiftPackageReference */,
 			);
 			productRefGroup = 4ECF32EE244139D800C9DE31 /* Products */;
 			projectDirPath = "";
@@ -399,6 +446,7 @@
 				4ECF32FD244139DC00C9DE31 /* LaunchScreen.storyboard in Resources */,
 				4ECF32FA244139DC00C9DE31 /* Assets.xcassets in Resources */,
 				4ECF332A2445919800C9DE31 /* Pacifico.ttf in Resources */,
+				4ED37C322459602400E9B39E /* fa-regular-400.ttf in Resources */,
 				4ECF32F8244139D800C9DE31 /* Main.storyboard in Resources */,
 				4ECF332C244592F700C9DE31 /* Quicksand-Bold.otf in Resources */,
 				4ECF33362446F94A00C9DE31 /* GoogleService-Info.plist in Resources */,
@@ -529,25 +577,40 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4ECF3327244569CD00C9DE31 /* CreateAccountViewController.swift in Sources */,
+				4EF59D342462453900239ED5 /* QRDisplayViewController.swift in Sources */,
 				4ECF332E244593AF00C9DE31 /* RoundedButton.swift in Sources */,
+				4E31E07D245A682E00368780 /* JoinLineViewController.swift in Sources */,
 				4EFF9FE324513E3D00D18A18 /* FBDatabaseService.swift in Sources */,
 				4EFF9FE524513E9400D18A18 /* FBAuthService.swift in Sources */,
+				4EF59D3C246337E500239ED5 /* ProfileTableViewController.swift in Sources */,
 				4EE054E52448226600294EF0 /* Reservation.swift in Sources */,
+				4EF59D4224634DE500239ED5 /* ReservationsModel.swift in Sources */,
+				4E43A458246384F600A8E3EA /* PlaceInLineTableViewCell.swift in Sources */,
+				4E3AF8BA245906CB005964AC /* HomeMasterViewController.swift in Sources */,
+				4EF59D4A24637A9800239ED5 /* ReportWaitTimeViewController.swift in Sources */,
+				4EF59D362462572200239ED5 /* HomeNavigationViewController.swift in Sources */,
+				4EF59D32246107E900239ED5 /* StartScreenViewController.swift in Sources */,
+				4EF59D3E2463448E00239ED5 /* DateService.swift in Sources */,
 				4EE054E92448245900294EF0 /* Store.swift in Sources */,
+				4EF59D462463512D00239ED5 /* LineReservationTableViewCell.swift in Sources */,
+				4E3AF8B2245804D5005964AC /* BrowseStoreViewController.swift in Sources */,
+				4E3AF8B4245807D4005964AC /* QRScannerViewController.swift in Sources */,
 				4E6C19112451711A00329E6C /* UnselectedTableViewCell.swift in Sources */,
+				4E43A4562463846500A8E3EA /* CheckInLineTableViewController.swift in Sources */,
+				4EF59D482463514900239ED5 /* ScheduleReservationTableViewCell.swift in Sources */,
 				4EE054E7244823A400294EF0 /* Queue.swift in Sources */,
 				4ECF3325244569A900C9DE31 /* User.swift in Sources */,
 				4EFF9FDA2450F08A00D18A18 /* StoresModel.swift in Sources */,
-				4EE054E32448159000294EF0 /* StartScreenViewController.swift in Sources */,
+				4EF59D382462646D00239ED5 /* ReservationMasterViewController.swift in Sources */,
 				4E6C19152451718500329E6C /* SelectedNonPartnerTableViewCell copy.swift in Sources */,
 				4EFF9FD82450EFE300D18A18 /* StoreListTableViewController.swift in Sources */,
 				4ECF32F5244139D800C9DE31 /* ViewController.swift in Sources */,
+				4EF59D442463510900239ED5 /* ActiveReservationTableViewCell.swift in Sources */,
 				4EFF9FDF24512AD600D18A18 /* LocationService.swift in Sources */,
+				4E398E652459464200CDD1E4 /* SignInSignUpViewController.swift in Sources */,
 				4ECF33342446E6BE00C9DE31 /* VerificationCodeViewController.swift in Sources */,
-				4EFF9FD62450EF0B00D18A18 /* BrowseStoreViewController.swift in Sources */,
+				4E3AF8B024580076005964AC /* CreateReservationViewController.swift in Sources */,
 				4ECF32F1244139D800C9DE31 /* AppDelegate.swift in Sources */,
-				4ECF33302445A20D00C9DE31 /* BottomBorderTextField.swift in Sources */,
 				4ECF32F3244139D800C9DE31 /* SceneDelegate.swift in Sources */,
 				4E6C19132451715E00329E6C /* SelectedPartnerStoreTableViewCell.swift in Sources */,
 			);
@@ -725,6 +788,7 @@
 			baseConfigurationReference = 33AA6A25B07E76B79A2CA716 /* Pods-LineSaver.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 7X3ZCKR7UA;
 				INFOPLIST_FILE = LineSaver/Info.plist;
@@ -734,8 +798,10 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = edu.usc.cathleey.LineSaver;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "LineSaver/View/LineSaver-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -744,6 +810,7 @@
 			baseConfigurationReference = 1269D5556E4A386702C889BC /* Pods-LineSaver.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 7X3ZCKR7UA;
 				INFOPLIST_FILE = LineSaver/Info.plist;
@@ -753,8 +820,9 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = edu.usc.cathleey.LineSaver;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "LineSaver/View/LineSaver-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
@@ -884,7 +952,15 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		4EFF9FDB24511D3900D18A18 /* XCRemoteSwiftPackageReference "SwiftyJSON" */ = {
+		4E31E077245A3A5D00368780 /* RemoteSwiftPackageReference */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/hackiftekhar/IQKeyboardManager.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 6.5.5;
+			};
+		};
+		4EFF9FDB24511D3900D18A18 /* RemoteSwiftPackageReference */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/SwiftyJSON/SwiftyJSON.git";
 			requirement = {
@@ -895,9 +971,14 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		4EFF9FDC24511D3900D18A18 /* SwiftyJSON */ = {
+		4E31E078245A3A5D00368780 /* SwiftPackageProductDependency */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 4EFF9FDB24511D3900D18A18 /* XCRemoteSwiftPackageReference "SwiftyJSON" */;
+			package = 4E31E077245A3A5D00368780 /* RemoteSwiftPackageReference */;
+			productName = IQKeyboardManagerSwift;
+		};
+		4EFF9FDC24511D3900D18A18 /* SwiftPackageProductDependency */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 4EFF9FDB24511D3900D18A18 /* RemoteSwiftPackageReference */;
 			productName = SwiftyJSON;
 		};
 /* End XCSwiftPackageProductDependency section */

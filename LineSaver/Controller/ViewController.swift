@@ -41,6 +41,7 @@ class ViewController: UIViewController, AVCaptureMetadataOutputObjectsDelegate{
     @IBAction func buttonClick(_ sender: Any) {
         if let myString = myTextField.text {
             // ascii encoding from string -> data
+            let jsonString = JSONEncoder(/* swift object*/ )
             let data = myString.data(using: .utf8, allowLossyConversion: false)
             let filter = CIFilter(name: "CIQRCodeGenerator")
             filter?.setValue(data, forKey: "inputMessage")

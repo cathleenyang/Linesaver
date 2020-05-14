@@ -11,7 +11,7 @@ import FirebaseAuth
 
 class VerificationCodeViewController: UIViewController {
 
-    @IBOutlet weak var verificationCodeTF: BottomBorderTextField!
+    @IBOutlet weak var verificationCodeTF: UITextField!
     var verificationID : String?
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,7 +26,9 @@ class VerificationCodeViewController: UIViewController {
         FBAuthService.shared.validatePhoneNumber(verificationID: verificationID, verificationCode: code) { (success) in
             DispatchQueue.main.async {
                 if success {
-                    self.dismiss(animated: true, completion: nil)
+                    let homeMasterViewController = self.storyboard?.instantiateViewController(identifier: "homeMasterViewController")
+                    UserDefaults.standard.set(true, forKey: "isLoggedIn")
+                    self.view.window?.rootViewController = homeMasterViewController
                 }
                 else {
                     // maybe have an alert giving the option to get a new code

@@ -20,15 +20,25 @@ class StoresModel: NSObject, CLLocationManagerDelegate {
         super.init()
     }
     
+    func randomBool() -> Bool {
+        return arc4random_uniform(2) == 0
+    }
+    
     // Swift Singleton pattern
     static let shared = StoresModel()
     
     // Decide which way to fetch data
     func getStores(onSuccess: @escaping ([Store]) -> Void) {
+        //let userLoc = LocationService.shared.getUserLocation()
+        //guard let location = userLoc else {return}
         let latitude = 34.1110541
         let longitude = -118.0390907
+        //let coord = location.coordinate //34.1110541//34.0256262 //
+        //let longitude = coord.longitude//-118.2872327// -118.0390907
+        //let latitude = coord.latitude
         let distance = 16000 // 10 miles
-        if let url = URL(string: "\(BASE_URL)/maps/api/place/nearbysearch/json?location=\(latitude),\(longitude)&radius=\(distance)&type=grocery_or_supermarket&key=\(ACCESS_KEY)" ) {
+        // type=grocery_or_supermarket
+        if let url = URL(string: "\(BASE_URL)/maps/api/place/nearbysearch/json?location=\(latitude),\(longitude)&radius=\(distance)&keyword=Grocery%20Store&key=\(ACCESS_KEY)" ) {
             print(url)
             let urlRequest = URLRequest(url: url)
             URLSession.shared.dataTask(with: urlRequest, completionHandler: {(data,response,error) in
@@ -43,11 +53,18 @@ class StoresModel: NSObject, CLLocationManagerDelegate {
                             let name = $0["name"].stringValue
                             let placeID = $0["place_id"].stringValue
                             let address = $0["vicinity"].stringValue
-                            let distance = self.distance(lat1: latitude, lon1: longitude, lat2: lat, lon2: long, unit: "M")
-                            let store = Store(placeID: placeID, lat: lat, long: long, name: name, address: address, distance: distance)
+                            //let distance = self.distance(lat1: latitude, lon1: longitude, lat2: lat, lon2: long, unit: "M")
+                            let store = Store(placeID: placeID, name: name, address: address, latitude: lat, longitude: long)
+                            if self.randomBool() {
+                                store.queuingEnabled = true
+                            }
+                            else {
+                                store.queuingEnabled = false
+                            }
+                            LocationService.shared.latLongToZip(store: store) { (updatedStore) in
+                                FBDatabaseService.shared.addToStoreDatabase(newStore: updatedStore) }
                             return store
                         }
-                        self.updateZips()
                         onSuccess(unsortedStores)
                         print(data)
                     }
@@ -57,18 +74,6 @@ class StoresModel: NSObject, CLLocationManagerDelegate {
                 }
             }).resume()
         }
-    }
-    
-    func updateZips() {
-        DispatchQueue.main.async {
-            for store in self.stores {
-                LocationService.shared.latLongToZip(store: store) { (zip) in
-                    store.zip = zip
-                    FBDatabaseService.shared.addToStoreDatabase(newStore: store)
-                }
-            }
-        }
-
     }
     
     func degToRadian( _ deg:Double)->Double {
@@ -97,6 +102,7 @@ class StoresModel: NSObject, CLLocationManagerDelegate {
         self.stores = stores
     }
     
+    // returns store at given index
     func store(at index: Int) -> Store? {
         if( index < stores.count && index >= 0) {
             return stores[index]

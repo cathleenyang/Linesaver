@@ -34,10 +34,13 @@
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
 	<key>NSCameraUsageDescription</key>
-	<string>Can I use the camera?</string>
+	<string>This app uses the camera to check in customers through QR code scanning</string>
+	<key>NSLocationWhenInUseUsageDescription</key>
+	<string>Grant permission to allow us to find stores nearby you</string>
 	<key>UIAppFonts</key>
 	<array>
 		<string>Pacifico.ttf</string>
+		<string>fa-regular-400.ttf</string>
 		<string>Quicksand-Bold.otf</string>
 	</array>
 	<key>UIApplicationSceneManifest</key>
@@ -70,8 +73,6 @@
 	<key>UISupportedInterfaceOrientations</key>
 	<array>
 		<string>UIInterfaceOrientationPortrait</string>
-		<string>UIInterfaceOrientationLandscapeLeft</string>
-		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
 	<key>UISupportedInterfaceOrientations~ipad</key>
 	<array>

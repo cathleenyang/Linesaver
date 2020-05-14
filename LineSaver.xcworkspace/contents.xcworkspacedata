@@ -2,6 +2,15 @@
 <Workspace
    version = "1.0">
    <FileRef
+      location = "group:/Users/Cat/Desktop/ITP 342/LineSaver/LineSaver/View/LineReservationTableViewCell.swift">
+   </FileRef>
+   <FileRef
+      location = "group:/Users/Cat/Desktop/ITP 342/LineSaver/LineSaver/Model/ReservationsModel.swift">
+   </FileRef>
+   <FileRef
+      location = "group:/Users/Cat/Desktop/ITP 342/LineSaver/LineSaver/Controller/ProfileTableViewController.swift">
+   </FileRef>
+   <FileRef
       location = "group:LineSaver.xcodeproj">
    </FileRef>
    <FileRef

@@ -1,3 +1,4 @@
 ${PODS_ROOT}/Target Support Files/Pods-LineSaver-LineSaverUITests/Pods-LineSaver-LineSaverUITests-resources.sh
+${PODS_CONFIGURATION_BUILD_DIR}/FontAwesome.swift/FontAwesome.swift.bundle
 ${PODS_ROOT}/GooglePlaces/Frameworks/GooglePlaces.framework/Resources/GooglePlaces.bundle
 ${PODS_ROOT}/PhoneNumberKit/PhoneNumberKit/Resources/PhoneNumberMetadata.json

@@ -19,6 +19,21 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         // This delegate does not imply the connecting scene or session are new (see `application:configurationForConnectingSceneSession` instead).
         guard let _ = (scene as? UIWindowScene) else { return }
     }
+    
+    func loadBaseController() {
+       let storyboard : UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+       guard let window = self.window else { return }
+       window.makeKeyAndVisible()
+       if UserDefaults.standard.bool(forKey: "isLoggedIn") == false {
+           let loginVC: ViewController = storyboard.instantiateViewController(withIdentifier: "startScreenViewController") as! ViewController
+           self.window?.rootViewController = loginVC
+       } else {
+           let homeVC: HomeMasterViewController = storyboard.instantiateViewController(withIdentifier: "homeMasterViewController") as! HomeMasterViewController
+           let navigationHomeVC = UINavigationController(rootViewController: homeVC)
+           self.window?.rootViewController = navigationHomeVC
+       }
+        self.window?.makeKeyAndVisible()
+    }
 
     func sceneDidDisconnect(_ scene: UIScene) {
         // Called as the scene is being released by the system.

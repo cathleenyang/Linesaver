@@ -18,18 +18,22 @@ class StoreListTableViewController: UITableViewController{
     
     let storesModel = StoresModel.shared
     var selectedIndexPath:Int?
+    var browseStoreViewController: BrowseStoreViewController?
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
         storesModel.getStores(onSuccess: {  (stores: [Store]) ->
             Void in
             DispatchQueue.main.async {
-                //let sortedStores = stores.sorted(by: Store.storeSorter)
-                self.storesModel.setStores(stores: stores)
+                let sortedStores = stores.sorted(by: Store.storeSorter)
+                self.storesModel.setStores(stores: sortedStores)
+                //self.storesModel.updateZips()
                 self.tableView.reloadData()
             }
         })
     }
+    
 
     // MARK: - Table view data source
 
@@ -38,49 +42,95 @@ class StoreListTableViewController: UITableViewController{
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        if let browseStoreViewController = browseStoreViewController {
+            if browseStoreViewController.searching {
+                return browseStoreViewController.searchStore.count
+            }
+        }
         return storesModel.getNumStores()
     }
     
-
+    override func viewWillAppear(_ animated: Bool) {
+        // add code to refresh the table when the tab is pressed
+        tableView.reloadData()
+    }
+    
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        var cell:UITableViewCell!
-        if let store = storesModel.store(at: indexPath.row) {
-            if selectedIndexPath == indexPath.row {
-                if store.isQueingEnabled() {
-                     cell = tableView.dequeueReusableCell(withIdentifier: "SelectedQueuing", for: indexPath) as! UnselectedTableViewCell
-                    return cell
-                }
-                else {
-                     cell = tableView.dequeueReusableCell(withIdentifier: "SelectedNonQueuing", for: indexPath) as! UnselectedTableViewCell
-                    return cell
-                }
-                
+        var store: Store!
+        if let browseStoreViewController = browseStoreViewController {
+            if browseStoreViewController.searching {
+                store = browseStoreViewController.searchStore[indexPath.row]
             }
             else {
-                let cell = tableView.dequeueReusableCell(withIdentifier: "Unselected", for: indexPath) as! UnselectedTableViewCell
-
-                if let store = storesModel.store(at: indexPath.row) {
-                    cell.nameLabel?.text = store.getName()
-                    if let wait = store.getWait() {
-                        cell.waitTimeLabel.text = "Current Wait: \(wait) min"
-                    } else {cell.waitTimeLabel.text = "No data" }
-                    cell.distanceLabel?.text = String(format: "%.2f mi", store.getDistance())
-                    cell.initialLabel?.text = String(store.getName().prefix(1))
-                    cell.imageView?.backgroundColor = .random()
-                }
+                guard let potentialStore = storesModel.store(at: indexPath.row) else {return UITableViewCell()}
+                store = potentialStore
+            }
+        }
+        else
+        {
+            guard let potentialStore = storesModel.store(at: indexPath.row) else {return UITableViewCell()}
+            store = potentialStore
+        }
+        // if reloading selected cell to expand
+        if selectedIndexPath == indexPath.row {
+            if store.queuingEnabled {
+                 let cell = tableView.dequeueReusableCell(withIdentifier: "SelectedQueuing", for: indexPath) as!
+                    SelectedPartnerStoreTableViewCell
+                cell.update(store: store)
+                return cell
+            }
+            else {
+                 let cell = tableView.dequeueReusableCell(withIdentifier: "SelectedNonQueuing", for: indexPath) as! SelectedNonPartnerTableViewCell
+                cell.update(store: store)
                 return cell
             }
         }
-        return cell
+        else {
+                let cell = tableView.dequeueReusableCell(withIdentifier: "Unselected", for: indexPath) as! UnselectedTableViewCell
+                cell.update(store: store)
+                return cell
+        }
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        selectedIndexPath = indexPath.row
+       // if we have a currently selected row
+        if let selectedIndexPath = selectedIndexPath {
+            // this means we're "deselecting the selected row"
+            if selectedIndexPath == indexPath.row {
+                self.selectedIndexPath = nil
+                tableView.reloadRows(at: [indexPath], with: UITableView.RowAnimation.automatic)
+            }
+            // we're selecting a new row but need to reload the previously selected row & the newly selected row
+            else {
+                let previousRow = selectedIndexPath
+                self.selectedIndexPath = indexPath.row
+                tableView.reloadRows(at: [IndexPath(row: previousRow, section: 0), indexPath], with: UITableView.RowAnimation.automatic)
+            }
+        }
+        // selecting a row for the first time
+        else {
+            self.selectedIndexPath = indexPath.row
+            tableView.reloadRows(at: [indexPath], with: UITableView.RowAnimation.automatic)
+        }
+    }
+    
+    override func tableView(_ tableView: UITableView, didDeselectRowAt indexPath: IndexPath) {
+        selectedIndexPath = nil
         tableView.reloadRows(at: [indexPath], with: UITableView.RowAnimation.automatic)
     }
     
+    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        if selectedIndexPath == indexPath.row {
+            return 220
+        }
+        else {
+            return 90
+        }
+    }
 
+    
+    // Notification.default.host 
     /*
     // Override to support conditional editing of the table view.
     override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {

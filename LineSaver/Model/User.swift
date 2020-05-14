@@ -9,39 +9,29 @@
 import Foundation
 
 // all actual login information is done behind the scenes w/ firebase, i.e. email, password & phone number
-struct User {
-    private var username: String?
-    private var zipcode : Int!
-    private var uniqueID : String!
-    private var reservations = [Reservation]()
+struct User : Encodable, Decodable{
     
-    init(zipcode:Int, uniqueID:String) {
+    var uniqueID : String
+    var username: String
+    var zipcode : Int
+    
+    init() {
+        self.uniqueID = ""
+        self.username = ""
+        self.zipcode = 0
+    }
+    
+    init(username:String, uniqueID:String) {
+        self.username = username
+        self.uniqueID = uniqueID
+        self.zipcode = 0
+    }
+    init(zipcode:Int, username:String, uniqueID:String) {
         self.zipcode = zipcode
+        self.username = username
         self.uniqueID = uniqueID
     }
     
-    mutating func setUsername(asUsername: String) {
-        username = asUsername
-    }
-    
-    func getReservations()-> [Reservation] {
-        return reservations
-    }
-    
-    func getUID() -> String {
-        return uniqueID
-    }
-    
-    func getZip() -> Int {
-        return zipcode
-    }
-    
-    
-    func getNumReservations() -> Int {
-        return reservations.count
-    }
-    
-    // should adding information here also update it in firebase?
     
     
 }
